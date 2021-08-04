@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="container">
+        <div class="wrapper">
+            <div class="content">
+                <div class="row justify-content-center">
+                    <h2 class="title">Add New Product</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-5 formm text-right">
+                        <br>
+                        <label for="name">Product Name</label>&nbsp;
+                        <input type="text" #proName/>
+                        <br>
+                        <br>
+                        <label for="code">Product Code</label>
+                        &nbsp;
+                        <input type="text" #proCode/>
+                        <br>
+                        <br>
+                        <label for="price">Product Price</label>
+                        &nbsp;
+                        <input type="number" #proPrice/>
+                        <br>
+                        <br>
+                        <label for="desc">Product Description</label>
+                        &nbsp;
+                        <input type="text" #proDesc/>
+                        <br>
+                        <br>
+                        <label for="rating">Product Rating</label>
+                        &nbsp;
+                        <input type="number" #proRating/>
+                        <br>
+                        <br>
+                        <label for="url">Product Image URL</label>
+                        &nbsp;
+                        <input type="url" #proURL/>
+                    </div>
+                </div>    
+                <div class="row justify-content-center">
+                    <button class="btn btn-neutral btn-lg" routerLink='/products'>Go Back</button>
+                    &nbsp;
+                    <button class="btn btn-primary btn-lg" (click)="onClickAddProduct(proName.value,proCode.value,proPrice.value,proDesc.value,proRating.value,proURL.value)">Add Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

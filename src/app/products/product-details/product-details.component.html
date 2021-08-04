@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="container">
+        <div class="wrapper">
+           <div class="content">
+
+                <div class="justify-content-center" *ngIf="product$ | async as product">
+                    <div class="row justify-content-center">
+                        <h1>{{product.name}}</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <table class="table table-light table-borderless">
+                                <tbody class="tbody">
+                                    <tr>
+                                        <th>ID</th>
+                                        <td>{{product.id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>{{product.name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Price</th>
+                                        <td>{{ product.price | currency:"&#8377;"}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Code</th>
+                                        <td>{{product.code}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>{{product.description}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Rating</th>
+                                        <td>{{product.rating}} ({{product.rating | rating}})</td>
+                                    </tr>
+            
+                                </tbody>
+                            </table>            
+                        </div>
+                        <div class="col-5">
+                            <img class="product-image" src={{product.imageURL}} alt="Image Unavailable"/>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                            <button class="btn btn-lg btn btn-secondary" [routerLink]="['/products']">Back</button>
+                            <button class="btn btn-lg btn-info" [routerLink]="['/edit-product', { id: product.id }]">Edit</button>
+                            <button class="btn btn-lg btn-danger" [routerLink]="['/products']" (click)="deleteProduct()">Delete</button>
+                    </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>

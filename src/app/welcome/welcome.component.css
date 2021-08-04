@@ -1,0 +1,10 @@
+.row h1{
+    margin: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 500%;
+}
+
+.col{
+    min-height: 800px;
+}

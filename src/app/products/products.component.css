@@ -1,0 +1,25 @@
+.row h1{
+    margin: 60px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 350%;
+}
+
+.my-2{
+    margin: 10px;
+}
+
+.table{
+    margin: 10px;
+    font-size: x-large;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table th{
+    padding: 20px;
+}
+
+.table td{
+    padding: 30px;
+}

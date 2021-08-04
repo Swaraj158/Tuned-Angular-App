@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="">
+        <div class="row justify-content-center">
+            <h1>Explore Products</h1>
+        </div>
+        <div class="row justify-content-right">
+            <form class="form-inline my-2 my-lg-0" ons>
+                <br/>
+                <div >
+                <p><input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" 
+                            (input)="onSearchChange($any($event.target).value)">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </p>
+                </div>
+        
+            </form>
+        </div>
+        <div class="row justify-content-center">
+            <table id="table-products" class="table table-light table-hover table-lg">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">More</th>
+                        <th scope="col">Image</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let pro of products$ | async | filter:filterstring">
+                    <tr>
+                        <td scope="col">{{pro.id}}</td>
+                        <td>{{pro.name}}</td>
+                        <td>{{pro.price}}</td>
+                        <td><button class="btn btn-primary" (click)="onSelect(pro)">More Details</button></td>
+                        <td class="td-image"><img src={{pro.imageURL}} alt="Image Unavailable" style="max-height: 150px;"/></td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+.wrapper{
+    position: relative;
+    margin: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.container{
+    min-height: 800px;
+}
+
+.title{
+    margin: 20px;
+    font-weight: bold;
+}
+
+.btn{
+    margin: 20px;
+}
+
+.input{
+    width: 100%;
+}
